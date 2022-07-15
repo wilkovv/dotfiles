@@ -31,6 +31,7 @@ mkdir -p "$HOME/.config/alacritty" || echo '~/.config/alacritty already exists'
 mkdir -p "$HOME/.config/dunst" || echo '~/.config/dunst already exists'
 mkdir -p "$HOME/.config/sway" || echo '~/.config/sway already exists'
 mkdir -p "$HOME/.config/waybar" || echo '~/.config/waybar already exists'
+mkdir -p "$HOME/.config/rofi/themes" || echo '~/.config/rofi/themes already exists' 
 
 # Copying dotfiles
 
@@ -43,6 +44,8 @@ cp .config/sway/import-gsettings $HOME/.config/sway/
 cp .config/sway/printscreen.sh $HOME/.config/sway/
 cp .config/waybar/config $HOME/.config/waybar/
 cp .config/waybar/style.css $HOME/.config/waybar/
+cp .config/rofi/config.rasi $HOME/.config/rofi/
+cp .config/rofi/themes/gruvbox-blue.rasi $HOME/.config/rofi/themes/
 
 
 if [[ ! -d "$HOME/.config/zsh" ]]
@@ -56,11 +59,11 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting  $HOME/.config/zs
 
 sudo usermod --shell /bin/zsh wilkow
 
-cp /usr/share/background/sway/Sway_Wallpaper_Blue_1920x1080.png ~/Pictures/Wallpapers/Sway-Wallpaper.png
+cp /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png ~/Pictures/Wallpapers/Sway-Wallpaper.png
 
 if [[ ! -d "$HOME/.local/share/fonts" ]]
 then
-	mkdir $HOME/.local/share/fonts
+	mkdir -p $HOME/.local/share/fonts
 fi
 
 cd $HOME/.local/share/fonts
