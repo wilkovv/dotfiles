@@ -32,7 +32,7 @@ set $main_screen "Virtual-1"
 
 # Wallpaper path (default wallpapers in more resolutions are available in /usr/share/backgrounds/sway/)
 #set $wallpaper_default "/usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png"
-set $wallpaper "/home/wilkow/Pictures/Wallpapers/5.jpg"
+set $wallpaper "/home/wilkow/Pictures/Wallpapers/Sway-Wallpaper.png"
 
 ### Output configuration
 
