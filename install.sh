@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#Script to be launched from dotfiles folder (for now)
+
 # Not installing git because it is required to pull this script anyways
 
 sudo dnf update
@@ -21,6 +23,26 @@ sudo dnf install \
 	pavucontrol \
 	NetworkManager-tui \
 	wl-clipboard
+
+# Checking and creating destination folders
+
+mkdir -p "$HOME/.config" || echo '~/.config already exists'
+mkdir -p "$HOME/.config/alacritty" || echo '~/.config/alacritty already exists'
+mkdir -p "$HOME/.config/dunst" || echo '~/.config/dunst already exists'
+mkdir -p "$HOME/.config/sway" || echo '~/.config/sway already exists'
+mkdir -p "$HOME/.config/waybar" || echo '~/.config/waybar already exists'
+
+# Copying dotfiles
+
+cp .p10k.zsh $HOME/
+cp .zshrc $HOME/
+cp .config/alacritty/alacritty.yml $HOME/.config/alacritty/
+cp .config/dunst/dunstrc $HOME/.config/dunst/
+cp .config/sway/config $HOME/.config/sway/
+cp .config/sway/import-gsettings $HOME/.config/sway/
+cp .config/sway/printscreen.sh $HOME/.config/sway/
+cp .config/waybar/config $HOME/.config/waybar/
+cp .config/waybar/style.css $HOME/.config/waybar/
 
 
 if [[ ! -d "$HOME/.config/zsh" ]]
