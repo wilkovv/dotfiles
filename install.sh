@@ -39,13 +39,23 @@ cp .p10k.zsh $HOME/
 cp .zshrc $HOME/
 cp .config/alacritty/alacritty.yml $HOME/.config/alacritty/
 cp .config/dunst/dunstrc $HOME/.config/dunst/
-cp .config/sway/config $HOME/.config/sway/
 cp .config/sway/import-gsettings $HOME/.config/sway/
 cp .config/sway/printscreen.sh $HOME/.config/sway/
-cp .config/waybar/config $HOME/.config/waybar/
 cp .config/waybar/style.css $HOME/.config/waybar/
 cp .config/rofi/config.rasi $HOME/.config/rofi/
 cp .config/rofi/themes/gruvbox-blue.rasi $HOME/.config/rofi/themes/
+
+# Instant fixes for QEMU vm's
+
+if [ $(sudo dmidecode -s system-manufacturer) == "QEMU" ]; then
+	sed "s/ 1920x1080 / 1600x900 /g" .config/sway/config | sed "s/eDP-1/Virtual-1/g" > $HOME/.config/sway/
+	sed "s/wlp3s0/enp1s0/g" .config/waybar/config > $HOME.config/waybar/
+else
+	cp .config/sway/config $HOME/.config/sway/
+	cp .config/waybar/config $HOME/.config/waybar/
+fi
+
+
 
 
 if [[ ! -d "$HOME/.config/zsh" ]]
@@ -58,6 +68,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions  $HOME/.config/zsh/zs
 git clone https://github.com/zsh-users/zsh-syntax-highlighting  $HOME/.config/zsh/zsh-syntax-highlighting-master
 
 sudo usermod --shell /bin/zsh wilkow
+
+mkdir -p $HOME/Pictures/Wallpapers || echo '~/Pictures/Wallpapers already exists'
 
 cp /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png ~/Pictures/Wallpapers/Sway-Wallpaper.png
 
