@@ -4,9 +4,9 @@
 
 # Not installing git because it is required to pull this script anyways
 
-sudo dnf update
-sudo dnf upgrade
-sudo dnf install \
+sudo dnf update -y
+sudo dnf upgrade -y
+sudo dnf install -y \
 	firefox \
 	sway \
 	waybar \
@@ -48,8 +48,8 @@ cp .config/rofi/themes/gruvbox-blue.rasi $HOME/.config/rofi/themes/
 # Instant fixes for QEMU vm's
 
 if [ $(sudo dmidecode -s system-manufacturer) == "QEMU" ]; then
-	sed "s/ 1920x1080 / 1600x900 /g" .config/sway/config | sed "s/eDP-1/Virtual-1/g" > $HOME/.config/sway/
-	sed "s/wlp3s0/enp1s0/g" .config/waybar/config > $HOME.config/waybar/
+	sed "s/ 1920x1080 / 1600x900 /g" .config/sway/config | sed "s/eDP-1/Virtual-1/g" > $HOME/.config/sway/config
+	sed "s/wlp3s0/enp1s0/g" .config/waybar/config > $HOME.config/waybar/config
 else
 	cp .config/sway/config $HOME/.config/sway/
 	cp .config/waybar/config $HOME/.config/waybar/
