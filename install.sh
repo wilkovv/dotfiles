@@ -50,19 +50,16 @@ cp .config/rofi/themes/gruvbox-blue.rasi $HOME/.config/rofi/themes/
 if [ $(sudo dmidecode -s system-manufacturer) == "QEMU" ]; then
 	sed "s/ 1920x1080 / 1600x900 /g" .config/sway/config | sed "s/eDP-1/Virtual-1/g" > $HOME/.config/sway/config
 	sed "s/wlp3s0/enp1s0/g" .config/waybar/config > $HOME/.config/waybar/config
-else
 	echo "if [[ -z $DISPLAY && $TTY = /dev/tty1 ]]; then exec sway; fi" > $HOME/.zprofile
+else
 	cp .config/sway/config $HOME/.config/sway/
 	cp .config/waybar/config $HOME/.config/waybar/
 fi
 
+# Installing zsh extensions
 
 
-
-if [[ ! -d "$HOME/.config/zsh" ]]
-then
-	mkdir $HOME/.config/zsh
-fi
+mkdir -p $HOME/.config/zsh || echo "~/.config/zsh already exists"
 
 git clone https://github.com/romkatv/powerlevel10k $HOME/.config/zsh/powerlevel10k
 git clone https://github.com/zsh-users/zsh-autosuggestions  $HOME/.config/zsh/zsh-autosuggestions
@@ -70,22 +67,18 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting  $HOME/.config/zs
 
 sudo usermod --shell /bin/zsh wilkow
 
+# Setting default wallpaper for sway
+
 mkdir -p $HOME/Pictures/Wallpapers || echo '~/Pictures/Wallpapers already exists'
 
 cp /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png ~/Pictures/Wallpapers/Sway-Wallpaper.png
 
-if [[ ! -d "$HOME/.local/share/fonts" ]]
-then
-	mkdir -p $HOME/.local/share/fonts
-fi
+# Downloading/Installing MesloLGS fonts for p10k
 
-cd $HOME/.local/share/fonts
-wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
-wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf
-wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
-wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
-cd -
+mkdir -p $HOME/.local/share/fonts || echo '~/.local/share/fonts already exists'
 
-
-
-
+wget -P $HOME/.local/share/fonts/ \ 
+	https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf \
+	https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf \
+	https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf \
+	https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
