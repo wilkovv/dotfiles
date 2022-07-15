@@ -49,8 +49,9 @@ cp .config/rofi/themes/gruvbox-blue.rasi $HOME/.config/rofi/themes/
 
 if [ $(sudo dmidecode -s system-manufacturer) == "QEMU" ]; then
 	sed "s/ 1920x1080 / 1600x900 /g" .config/sway/config | sed "s/eDP-1/Virtual-1/g" > $HOME/.config/sway/config
-	sed "s/wlp3s0/enp1s0/g" .config/waybar/config > $HOME.config/waybar/config
+	sed "s/wlp3s0/enp1s0/g" .config/waybar/config > $HOME/.config/waybar/config
 else
+	echo "if [[ -z $DISPLAY && $TTY = /dev/tty1 ]]; then exec sway; fi" > $HOME/.zprofile
 	cp .config/sway/config $HOME/.config/sway/
 	cp .config/waybar/config $HOME/.config/waybar/
 fi

@@ -39,7 +39,7 @@ set $wallpaper "/home/wilkow/Pictures/Wallpapers/Sway-Wallpaper.png"
 # Setting wallpaper
 output * bg $wallpaper fill
 
-   Simple configuration:
+# Simple configuration:
 output $main_screen resolution 1920x1080 position 1920,0
 
 
