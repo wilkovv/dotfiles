@@ -77,7 +77,7 @@ cp /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png ~/Pictures/Wall
 
 mkdir -p $HOME/.local/share/fonts || echo '~/.local/share/fonts already exists'
 
-wget -P $HOME/.local/share/fonts/ \ 
+wget -P $HOME/.local/share/fonts/ \
 	https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf \
 	https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf \
 	https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf \
