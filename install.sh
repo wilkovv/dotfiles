@@ -1,7 +1,7 @@
 #!/bin/bash
-
+#
 #Script to be launched from dotfiles folder (for now)
-
+#
 # Not installing git because it is required to pull this script anyways
 
 sudo dnf update -y
@@ -50,14 +50,13 @@ cp .config/rofi/themes/gruvbox-blue.rasi $HOME/.config/rofi/themes/
 if [ $(sudo dmidecode -s system-manufacturer) == "QEMU" ]; then
 	sed "s/ 1920x1080 / 1600x900 /g" .config/sway/config | sed "s/eDP-1/Virtual-1/g" > $HOME/.config/sway/config
 	sed "s/wlp3s0/enp1s0/g" .config/waybar/config > $HOME/.config/waybar/config
-	echo "if [[ -z $DISPLAY && $TTY = /dev/tty1 ]]; then exec sway; fi" > $HOME/.zprofile
+	echo 'if [[ -z $DISPLAY && $TTY = /dev/tty1 ]]; then exec sway; fi' > $HOME/.zprofile
 else
 	cp .config/sway/config $HOME/.config/sway/
 	cp .config/waybar/config $HOME/.config/waybar/
 fi
 
 # Installing zsh extensions
-
 
 mkdir -p $HOME/.config/zsh || echo "~/.config/zsh already exists"
 
