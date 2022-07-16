@@ -3,4 +3,4 @@ modi: "window,drun,ssh,combi";
 combi-modi: "window,drun,ssh";
 icon-theme: "We10X";
 }
-@theme "gruvbox-blue"
+@theme "skeuos-teal"

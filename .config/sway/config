@@ -32,7 +32,7 @@ set $main_screen "eDP-1"
 
 # Wallpaper path (default wallpapers in more resolutions are available in /usr/share/backgrounds/sway/)
 #set $wallpaper_default "/usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png"
-set $wallpaper "/home/wilkow/Pictures/Wallpapers/Sway-Wallpaper.png"
+set $wallpaper "~/Pictures/Wallpapers/Sway-Wallpaper.png"
 
 ### Output configuration
 
@@ -239,8 +239,10 @@ default_floating_border pixel 2
 gaps outer 2
 gaps inner 2
 #class		border	backgr.	text	indicator	child_border
-client.focused	#458588 #285577 #ffffff #2e9ef4 #458588
-
+# gruvbox
+#client.focused	#458588 #285577 #ffffff #2e9ef4 #458588
+# skeuos-teal
+client.focused	#19a187 #285577 #ffffff #2e9ef4 #19a187
 #default_floating_border normal
 
 

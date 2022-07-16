@@ -9,13 +9,13 @@
 
 tooltip {
   background: #1d2021;
-  border: 1px solid #458588;
+  border: 1px solid #04ac84;
 }
 
 window#waybar {
-    background-color: rgba(29, 32, 33, 1);
+    background-color: #1c1c24;
     /*border-bottom: 3px solid rgba(100, 114, 125, 0.5);*/
-    color: #ebdbb2;
+    color: rgba(28,28,36,0.8);
     font-family: Arial;
     transition-property: background-color;
     transition-duration: .5s;
@@ -47,7 +47,7 @@ window#waybar.chromium {
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: #ebdbb2;
+    color: #d0cfcc;
     /* Use box-shadow instead of border so the text isn't offset */
     box-shadow: inset 0 -3px transparent;
 }
@@ -55,11 +55,11 @@ window#waybar.chromium {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button:hover {
     background: rgba(0, 0, 0, 0.2);
-    box-shadow: inset 0 -3px #ebdbb2;
+    box-shadow: inset 0 -3px #1c1c24;
 }
 #workspaces button.focused {
-    background-color: #a89984;
-    box-shadow: inset 0 -3px #ebdbb2;
+    background-color: #04ac84;
+    box-shadow: inset 0 -3px #1c1c24;
     color: #1d2021;
     font-weight: bold;
 }
@@ -93,7 +93,7 @@ window#waybar.chromium {
 }
 
 #window {
-    color: #ebdbb2;	
+    color: #d0cfcc;	
 }
 #workspaces {
     margin: 0 4px;
@@ -117,12 +117,12 @@ window#waybar.chromium {
 #clock {
     /*background-color: #64727D;*/
     border-bottom: 0px solid rgba(251,73,52,1);
-    color: #ebdbb2;
+    color: #d0cfcc;
 }
 
 #battery {
     /*background-color: #ffffff;*/
-    color: #ebdbb2;
+    color: #d0cfcc;
 }
 
 #battery.charging, #battery.plugged {
@@ -154,7 +154,7 @@ label:focus {
 
 #cpu.critical {
     background-color: #cc241d;
-    color: #ebdbb2;
+    color: #d0cfcc;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -170,18 +170,18 @@ label:focus {
 
 #cpu {
     /*background-color: #fb4934;*/
-    color: #ebdbb2;
+    color: #d0cfcc;
     /*border-bottom: 3px solid rgba(251,73,52,1);*/
     /*border-radius: 16px;*/
 }
 
 #memory {
    /* background-color: #9b59b6;*/
-    color: #ebdbb2;
+    color: #d0cfcc;
 }
 #memory.critical {
     background-color: #cc241d;
-    color: #ebdbb2;
+    color: #d0cfcc;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -200,26 +200,26 @@ label:focus {
 
 #network {
    /* background-color: #2980b9;*/
-    color: #ebdbb2;
+    color: #d0cfcc;
 }
 
 #network.disconnected {
    /* background-color: #f53c3c;*/
-    color: #ebdbb2;
+    color: #d0cfcc;
 }
 
 #pulseaudio {
     background-color: #cc241d;
-    color: #ebdbb2;
+    color: #d0cfcc;
 }
 
 #disk{
-    color: #ebdbb2;
+    color: #d0cfcc;
 }
 
 #disk.critical {
     background-color: #cc241d;
-    color: #ebdbb2;
+    color: #d0cfcc;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -237,7 +237,7 @@ label:focus {
 
 #pulseaudio.source-muted {
     background-color: rgba(255, 255, 255, 0);
-    color: #ebdbb2;
+    color: #d0cfcc;
 }
 
 #custom-media {
@@ -277,7 +277,7 @@ label:focus {
 
 #tray tooltip {
     background: #1d2021;
-    border: 1px solid #458588;
+    border: 1px solid #04ac84;
 }
 
 #idle_inhibitor {
@@ -308,7 +308,7 @@ label:focus {
 
 #language {
    /* background: #00b093;*/
-    color: #ebdbb2;
+    color: #d0cfcc;
     padding: 0 5px;
     margin: 0 5px;
     min-width: 16px;
@@ -316,7 +316,7 @@ label:focus {
 
 #keyboard-state {
     /*background: #97e1ad;*/
-    color: #ebdbb2;
+    color: #d0cfcc;
     padding: 0 0px;
     margin: 0 5px;
     min-width: 16px;

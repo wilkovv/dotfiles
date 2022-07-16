@@ -71,7 +71,7 @@ hide_duplicate_count = yes
 # screen width minus the width defined in within the geometry option.
 #geometry = "250x50-40+40"
 origin = top-right
-offset = 6x6
+offset = 4x4
 
 # Shrink window if it's smaller than the width.  Will be ignored if
 # width is 0.
@@ -155,7 +155,7 @@ max_icon_size = 80
 # Paths to default icons.
 icon_path = /usr/share/icons/Paper/16x16/mimetypes/:/usr/share/icons/Paper/48x48/status/:/usr/share/icons/Paper/16x16/devices/:/usr/share/icons/Paper/48x48/notifications/:/usr/share/icons/Paper/48x48/emblems/
 
-frame_width = 3
+frame_width = 2
 frame_color = "#8EC07C"
 
 [shortcuts]
@@ -182,23 +182,25 @@ context = ctrl+shift+period
 [urgency_low]
 # IMPORTANT: colors have to be defined in quotation marks.
 # Otherwise the "#" and following would be interpreted as a comment.
-frame_color = "#3B7C87"
-foreground = "#3B7C87"
-background = "#191311"
+#frame_color = "#3B7C87"
+#foreground = "#3B7C87"
+frame_color = "#19a187"
+foreground = "#d0cfcc"
+background = "#1c1c24"
 #background = "#2B313C"
 timeout = 4
 
 [urgency_normal]
 frame_color = "#98971a"
-foreground = "#ebdbb2"
-background = "#1d2021"
+foreground = "#d0cfcc"
+background = "#1c1c24"
 #background = "#2B313C"
 timeout = 6
 
 [urgency_critical]
 frame_color = "#B7472A"
-foreground = "#B7472A"
-background = "#191311"
+foreground = "#d0cfcc"
+background = "#1c1c24"
 #background = "#2B313C"
 timeout = 8
 

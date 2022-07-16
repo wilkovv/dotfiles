@@ -64,7 +64,7 @@ git clone https://github.com/romkatv/powerlevel10k $HOME/.config/zsh/powerlevel1
 git clone https://github.com/zsh-users/zsh-autosuggestions  $HOME/.config/zsh/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting  $HOME/.config/zsh/zsh-syntax-highlighting-master
 
-sudo usermod --shell /bin/zsh wilkow
+sudo usermod --shell /bin/zsh $USERNAME
 
 # Setting default wallpaper for sway
 
