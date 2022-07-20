@@ -26,9 +26,9 @@ window#waybar.hidden {
 }
 
 
-window#waybar.empty {
+/*window#waybar.empty {
     background-color: transparent;
-}
+}*/
 /*
 window#waybar.solo {
     background-color: #FFFFFF;
@@ -93,6 +93,7 @@ window#waybar.chromium {
 }
 
 #window {
+    font-weight: bold;
     color: #d0cfcc;	
 }
 #workspaces {
@@ -164,7 +165,7 @@ label:focus {
 
 #cpu.warning {
 	background-color: #d79921;
-	color: #282828;
+	color: #04ac84;
 
 }
 
@@ -191,7 +192,7 @@ label:focus {
 
 #memory.warning {
 	background-color: #d79921;
-	color: #282828;
+	color: #04ac84;
 }
 
 #backlight {
@@ -210,7 +211,7 @@ label:focus {
 
 #pulseaudio {
     background-color: #cc241d;
-    color: #d0cfcc;
+    color: #1c1c24;
 }
 
 #disk{
@@ -229,7 +230,7 @@ label:focus {
 
 #disk.warning {
 	background-color: #d79921;
-	color: #282828;
+	color: #04ac84;
 
 }
 

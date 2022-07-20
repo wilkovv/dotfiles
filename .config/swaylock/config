@@ -1,0 +1,47 @@
+#Technical settings
+
+daemonize
+# Commented because causes strange right offset flickering
+#indicator-idle-visible
+ignore-empty-password
+
+#Background
+
+color=1c1c24
+
+#Ring geometry
+
+indicator-radius=200
+
+#General ring settings
+
+inside-color=00000000
+text-color=d0cfcc
+ring-color=d0cfcc
+layout-bg-color=d0cfcc
+font="MesloLGS NF"
+
+#Highlighting colors
+
+key-hl-color=04ac84
+bs-hl-color=cc241d
+
+text-caps-lock-color=d65d0e
+
+#Verifying ring
+
+ring-ver-color=04ac84
+inside-ver-color=00000000
+text-ver-color=ebdbb2
+
+#Wrong ring
+
+ring-wrong-color=cc241d
+inside-wrong-color=00000000
+text-wrong-color=ebdbb2
+
+#Clear ring
+
+ring-clear-color=d79921
+inside-clear-color=00000000
+text-clear-color=ebdbb2

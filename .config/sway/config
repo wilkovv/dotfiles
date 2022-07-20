@@ -95,7 +95,8 @@ exec swayidle -w \
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+#    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+e exec rofi -show power-menu -modi power-menu:rofi-power-menu
 #
 # Moving around:
 #
@@ -266,5 +267,8 @@ exec /usr/libexec/polkit-gnome-authentication-agent-1
 
 
 assign [app_id="firefox"] workspace number 2
-#Not working yet
-#assign [title="Spotify" shell="xwayland"] workspace number 6
+assign [class="discord"] workspace number 5
+for_window [class="Spotify" shell="xwayland"] move container to workspace number 6
+for_window [class="explorer.exe" title="Wine System Tray"] move scratchpad
+for_window [app_id="leagueclientux.exe"] move container to workspace number 4
+for_window [app_id="riotclientux.exe" title="Riot Client Main"] move container to workspace number 4
