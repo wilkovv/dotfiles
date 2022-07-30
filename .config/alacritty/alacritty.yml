@@ -422,7 +422,30 @@ schemes:
       cyan:     '#33c7de'
       white:    '#ffffff'
 
-colors: *gruvbox_skeuos
+  kali_dark: &kali_dark 
+    primary:
+      background: '#1f2229'
+      foreground: '#e6e6e6'
+    normal:
+      black:    '#1f2229'
+      red:      '#d41919'
+      green:    '#5ebdab'
+      yellow:   '#fea44c'
+      blue:     '#367bf0'
+      magenta:  '#9755b3'
+      cyan:     '#49aee6'
+      white:    '#e6e6e6'
+    bright:
+      black:    '#198388'
+      red:      '#ec0101'
+      green:    '#47d4b9'
+      yellow:   '#ff8a18'
+      blue:     '#277fff'
+      magenta:  '#962ac3'
+      cyan:     '#05a1f7'
+      white:    '#ffffff'
+
+colors: *kali_dark
   # Default colors
   #primary:
     #background: '#000000'
