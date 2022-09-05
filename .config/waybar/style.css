@@ -165,7 +165,7 @@ label:focus {
 
 #cpu.warning {
 	background-color: #d79921;
-	color: #04ac84;
+	color: #1c1c24;
 
 }
 
@@ -192,7 +192,7 @@ label:focus {
 
 #memory.warning {
 	background-color: #d79921;
-	color: #04ac84;
+	color: #1c1c24;
 }
 
 #backlight {
@@ -230,7 +230,7 @@ label:focus {
 
 #disk.warning {
 	background-color: #d79921;
-	color: #04ac84;
+	color: #1c1c24;
 
 }
 

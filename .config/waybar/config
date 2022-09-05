@@ -46,7 +46,7 @@
 
     "network": {
         "interval": 2,
-	"interface": "wlp3s0", // (NOT Optional) To force the use of this interface
+	"interface": "enp2s0", // (NOT Optional) To force the use of this interface
         //"format-wifi": "{essid} ({signalStrength}%) ",
         "format-wifi": " {bandwidthDownBits}  {bandwidthUpBits}",
         "format-ethernet": " {bandwidthDownBits}  {bandwidthUpBits}",
