@@ -15,6 +15,8 @@ SAVEHIST=1000
 autoload -U colors && colors
 PS1='%B%F{blue}[%n@%m%F{white}:%1~%F{blue}]%F{white}%b$'
 
+PATH=$PATH":~/.cargo/bin"
+
 #Load completion of commands
 autoload -U compinit
 zstyle ':completion:*' menu select
