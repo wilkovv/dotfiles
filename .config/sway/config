@@ -262,6 +262,8 @@ bindsym $mod+Shift+m exec pactl set-source-mute alsa_input.pci-0000_00_1f.3.anal
 #bindsym Print exec grim ~/Pictures/$(date +'%d-%m-%y_%H:%M:%S.png')
 
 bindsym Print exec '~/.config/sway/printscreen.sh'
+bindsym $mod+Print exec '~/.config/sway/printscreen.sh --select'
+
 
 exec /usr/libexec/polkit-gnome-authentication-agent-1
 

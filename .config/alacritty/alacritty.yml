@@ -425,6 +425,7 @@ schemes:
   kali_dark: &kali_dark 
     primary:
       background: '#1f2229'
+        #      background: '#111111'
       foreground: '#e6e6e6'
     normal:
       black:    '#1f2229'
