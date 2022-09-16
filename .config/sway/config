@@ -7,7 +7,7 @@
 ### Variables
 
 # Logo key. Use Mod1 for Alt, Mod4 for "Windows" key
-set $mod Mod1
+set $mod Mod4
 
 # Home row direction keys, like vim
 set $left h
@@ -58,7 +58,17 @@ exec swayidle -w \
 # resumed. It will also lock your screen before your computer goes to sleep.
 
 ### Input configuration
-#
+
+input "type:keyboard" { 
+    xkb_layout pl,us
+    xkb_variant nodeadkeys
+    # Toggle keyboard layout using both Ctrl
+    # Swap left alt with left windows key (For less alt issues in apps)
+    xkb_options grp:ctrls_toggle,altwin:swap_lalt_lwin
+}
+
+
+
 # Example configuration:
 #
 #   input "2:14:SynPS/2_Synaptics_TouchPad" {
