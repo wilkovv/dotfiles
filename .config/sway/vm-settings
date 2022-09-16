@@ -1,0 +1,5 @@
+set $main_screen "Virtual-1"
+set $main_screen_resolution "1600x900"
+set $main_screen_position "0,0"
+
+output $main_screen resolution $main_screen_resolution position $main_screen_position
